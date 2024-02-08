@@ -22,6 +22,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="index.css">
 
+    <!-- font import for montserrat and work sans-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -31,15 +32,49 @@
 
 <header>
     <div class="nav">
-        <a href="/index.html">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <div class="navContact">
+            <a href="tel:+16107311318">
+                <div class="navContactLink">
+                    <object id="svg1" data="/icons/phone.svg" type="image/svg+xml"></object>
+                </div>
+            </a>
+        </div>
+        <div class="navLinks">
+            <a href="/">
+                <div class="navLinkActive">
+                    <object id="svg1" data="/icons/home.svg" type="image/svg+xml"></object>
+                    <p>Home</p>
+                </div>
+            </a>
+            <a href="/about">
+                <div class="navLinkInactive">
+                    <object id="svg1" data="/icons/about.svg" type="image/svg+xml"></object>
+                    <p>About</p>
+                </div>
+            </a>
+            <a href="/contact">
+                <div class="navLinkInactive">
+                    <object id="svg1" data="/icons/contact.svg" type="image/svg+xml"></object>
+                    <p>Contact</p>
+                </div>
+            </a>
+        </div>
+        <div class="navContact">
+            <a href="mailto:ndebakey@gmail.com">
+                <div class="navContactLink">
+                    <object id="svg1" data="/icons/email.svg" type="image/svg+xml"></object>
+                </div>
+            </a>
+        </div>
     </div>
 </header>
 
 <body>
     <h1><b>Help </b>Welcome</h1>
-    <p>This is my new website for Dalton. Hope you dfkkhjhlike it.</p>
+    <div class="help">
+        <p>test</p>
+    </div>
+    <p class="addSpace">This is my new website for Dalton. Hope you dfkkhjhlike it.</p>
 </body>
 
 <footer>
