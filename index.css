@@ -24,42 +24,45 @@ html {
 
 body {
     background: #D6D6D6;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* - scrollbar - */
-  /* - firefox - */
-  * {
+/* - firefox - */
+* {
     scrollbar-width: none;
-    scrollbar-color: #333533 #d6d6d6;
-  }
+    scrollbar-color: #202020 #d6d6d6;
+}
 
-  /* - chrome, edge, and safari - */
-  *::-webkit-scrollbar {
+/* - chrome, edge, and safari - */
+*::-webkit-scrollbar {
     width: 16px;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #d6d6d6;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #333533;
+*::-webkit-scrollbar-thumb {
+    background-color: #202020;
     border-radius: 10px;
     border: 3px solid #d6d6d6;
-  }
+}
 
 /* ------------------------------ navigation ------------------------------ */
 
+/* - entire header styling - */
 header {
     background-color: transparent;
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 1rem !important;
+    position: fixed !important;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 100% !important;
 }
 
+/* - entire nav container - */
 .nav {
     width: fit-content;
     display: flex;
@@ -67,8 +70,10 @@ header {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    z-index: 10;
 }
 
+/* - links container - */
 .navLinks {
     display: inline-flex;
     background: #fff;
@@ -87,13 +92,14 @@ header {
     font-size: 0.75rem;
 }
 
+/* - container of the text and svg - */
 .navLinks div {
     padding: 1.5rem;
 }
 
 /* - navigation links active/current page - */
 .navLinkActive {
-    background-color: #FFD100;
+    background-color: #FFEE32;
     border-radius: 0.8rem;
     text-align: center;
     width: fit-content;
@@ -102,6 +108,7 @@ header {
     color: #202020;
 }
 
+/* - navigation links inactive pages container - */
 .navLinkInactive {
     background-color: #d6d6d6;
     border-radius: 0.8rem;
@@ -111,6 +118,7 @@ header {
     padding: 0.5rem;
 }
 
+/* - navigation links inactive svg and text - */
 .navLinkInactive object,
 .navLinkInactive p,
 .navLinkActive object,
@@ -119,18 +127,25 @@ header {
     padding: 0;
 }
 
+/* - phone/email container in navigation - */
 .navContact {
     background: #fff;
     margin: 0 1rem 0 1rem;
     border-radius: 1rem;
 }
 
-.navContact a, .navLinks a {
-position: relative;
-display: inline-block;
+/* - link container encompassing the div holding the svg - */
+.navContact a,
+.navLinks a {
+    position: relative;
+    display: inline-block;
+    transition: 0.25s;
+    border-radius: 1rem;
 }
 
-.navContact a::after, .navLinks a:after {
+/* - how to get the svg linked in the button in the nav - */
+.navContact a::after,
+.navLinks a::after {
     content: "";
     position: absolute;
     top: 0;
@@ -139,6 +154,13 @@ display: inline-block;
     right: 0;
 }
 
+/* - navigation hover action - */
+.navContact a:hover,
+.navLinks a:hover {
+    background-color: #FFEE32;
+}
+
+/* - div styling for the svg - */
 .navContactLink {
     background-color: #d6d6d6;
     border-radius: 0.8rem;
@@ -147,7 +169,85 @@ display: inline-block;
 }
 
 .help {
-    width: 200px;
-    background: #ddd;
-    height: 2300px;
+    padding-top: 50rem;
+}
+
+/* ------------------------------ parallax leads ------------------------------ */
+
+.parallax {
+    background-image: url("/images/electricalTools1.jpg");
+    min-height: 75vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------------ footer ------------------------------ */
+
+/* - entire footer styling - */
+footer {
+    text-align: center;
+    background-color: #202020;
+    color: #202020;
+    font-family: 'Work Sans', sans-serif;
+    margin: 2rem;
+    border-radius: 4rem;
+}
+
+/* - the container for the logo/naph box/navigation - */
+.footerContainer {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+}
+
+/* - footer columns styling - */
+.footerLogo,
+.footerContact,
+.footerLinks {
+    flex: 1;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #D6D6D6;
+    border-radius: 2rem;
+}
+
+/* - business name/navigation title styling in footer - */
+.footerBizName,
+.footerLinksTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* - footer naph box phone number text adjustments - */
+.footerPhone {
+    text-decoration: none;
+    color: #202020;
+}
+
+.footerPhone:hover {
+    text-decoration: underline;
+}
+
+/* - footer navigation link styling - */
+.footerLinks a {
+    display: block;
+    text-decoration: none;
+    color: #202020;
+    padding: 0.5rem;
+    transition: 0.25s;
+    border-radius: 1rem;
+}
+
+.footerLinks a:hover {
+    background-color: #FFEE32;
+}
+
+/* - copyright section styling - */
+.footerCopyright {
+    font-size: 0.75rem;
+    padding-bottom: 2rem;
+    color: #D6D6D6;
 }
