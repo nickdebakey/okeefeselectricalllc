@@ -56,7 +56,7 @@ body {
 header {
     background-color: transparent;
     position: fixed !important;
-    top: 5%;
+    top: 7.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100% !important;
@@ -172,8 +172,30 @@ header {
     padding-top: 50rem;
 }
 
+/* ------------------------------ buttons ------------------------------ */
+
+/* - buttons in leads - */
+.leadContactBtn {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
+    color: #202020;
+    background: #D6D6D6;
+    border: none;
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+/* - hover action for buttons in leads - */
+.leadContactBtn:hover {
+    background-color: #FFEE32;
+    letter-spacing: .25rem;
+}
+
 /* ------------------------------ parallax leads ------------------------------ */
 
+/* - parallax images - */
 .parallax {
     background-image: url("/images/electricalTools1.jpg");
     min-height: 75vh;
@@ -181,6 +203,107 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: #D6D6D6 solid 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.leadTextContainer {
+    margin: 2rem;
+    padding: 2rem;
+    background: rgba(32, 32, 32, 0.25);
+    border-radius: 2rem;
+    color: #fff;
+}
+
+.leadHeadline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.leadSubheadline {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.75rem;
+}
+
+/* ------------------------------ content 1 ------------------------------ */
+
+.content1 {
+    margin: 2rem;
+    text-align: center;
+    padding: 1rem 8rem 1rem 8rem;
+}
+
+.content1Headline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto;
+    color: #202020;
+    margin: 1rem;
+}
+
+.content1 hr {
+    border: #FFEE32 solid 1px;
+    width: 10%;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.content1:hover hr {
+    width: 30%;
+}
+
+.content1Subheadline {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #333533;
+}
+
+.content1Body {
+    font-family: 'Work Sans', sans-serif;
+    color: #202020;
+}
+
+/* ------------------------------ features ------------------------------ */
+
+.features {
+    display: flex;
+}
+
+.features lord-icon {
+    margin: auto;
+}
+
+.aboutFeatureContainer, .contactFeatureContainer {
+    flex: 1;
+    margin: 2rem 4rem;
+    padding: 2rem;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+
+.aboutFeatureContainer a, .contactFeatureContainer a {
+    margin: 2rem 4rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
+    color: #202020;
+    background: #D6D6D6;
+    border: none;
+    transition: 0.25s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.aboutFeatureContainer a:hover, .contactFeatureContainer a:hover {
+    background-color: #FFEE32;
+    letter-spacing: .25rem;
 }
 
 /* ------------------------------ footer ------------------------------ */
