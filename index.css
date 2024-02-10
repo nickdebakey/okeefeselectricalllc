@@ -381,7 +381,11 @@ header {
 
 .content2ColumnR img {
     margin-top: -5rem;
+    margin-left: 1.5rem;
     border-radius: 2rem;
+    width: 100%;
+    max-width: 30vw;
+    height: auto;
 }
 
 /* ------------------------------ parallax lead 2 ------------------------------ */
