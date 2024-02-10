@@ -23,16 +23,26 @@ html {
 }
 
 body {
-    background: #D6D6D6;
+    background: var(--lightblack);
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --lightgray: #d6d6d6;
+    --lightyellow: #ffee32;
+    --darkyellow: #ffd100;
+    --darkgray: #333533;
+    --lightblack: #202020;
+    --black: #000;
 }
 
 /* - scrollbar - */
 /* - firefox - */
 * {
     scrollbar-width: none;
-    scrollbar-color: #202020 #d6d6d6;
+    scrollbar-color: var(--darkyellow) var(--lightblack);
 }
 
 /* - chrome, edge, and safari - */
@@ -41,13 +51,13 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-    background: #d6d6d6;
+    background: var(--lightblack);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #202020;
+    background-color: var(--darkyellow);
     border-radius: 10px;
-    border: 3px solid #d6d6d6;
+    border: 3px solid var(--lightblack);
 }
 
 /* ------------------------------ navigation ------------------------------ */
@@ -70,13 +80,13 @@ header {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    z-index: 10;
+    z-index: 2;
 }
 
 /* - links container - */
 .navLinks {
     display: inline-flex;
-    background: #fff;
+    background: var(--lightgray);
     margin: 1rem auto 1rem auto;
     font-family: 'Montserrat', sans-serif;
     border-radius: 1rem;
@@ -84,7 +94,7 @@ header {
 
 /* - navigation links - */
 .navLinks a {
-    color: #202020;
+    color: var(--lightblack);
     text-align: center;
     margin: 0;
     text-decoration: none;
@@ -99,7 +109,7 @@ header {
 
 /* - navigation links active/current page - */
 .navLinkActive {
-    background-color: #FFEE32;
+    background-color: var(--darkyellow);
     border-radius: 0.8rem;
     text-align: center;
     width: fit-content;
@@ -110,12 +120,13 @@ header {
 
 /* - navigation links inactive pages container - */
 .navLinkInactive {
-    background-color: #d6d6d6;
+    background-color: var(--lightblack);
     border-radius: 0.8rem;
     text-align: center;
     width: fit-content;
     margin: 0.5rem;
     padding: 0.5rem;
+    color: var(--lightgray);
 }
 
 /* - navigation links inactive svg and text - */
@@ -129,7 +140,7 @@ header {
 
 /* - phone/email container in navigation - */
 .navContact {
-    background: #fff;
+    background: var(--lightgray);
     margin: 0 1rem 0 1rem;
     border-radius: 1rem;
 }
@@ -157,12 +168,12 @@ header {
 /* - navigation hover action - */
 .navContact a:hover,
 .navLinks a:hover {
-    background-color: #FFEE32;
+    background-color: var(--darkyellow);
 }
 
 /* - div styling for the svg - */
 .navContactLink {
-    background-color: #d6d6d6;
+    background-color: var(--lightblack);
     border-radius: 0.8rem;
     margin: 0.5rem;
     padding: 0.5rem;
@@ -180,8 +191,8 @@ header {
     font-size: 1rem;
     border-radius: 1.5rem;
     padding: 1rem 1.5rem;
-    color: #202020;
-    background: #D6D6D6;
+    color: var(--lightblack);
+    background: var(--lightgray);
     border: none;
     transition: 0.25s;
     text-decoration: none;
@@ -189,7 +200,7 @@ header {
 
 /* - hover action for buttons in leads - */
 .leadContactBtn:hover {
-    background-color: #FFEE32;
+    background-color: var(--darkyellow);
     letter-spacing: .25rem;
 }
 
@@ -203,7 +214,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: #D6D6D6 solid 1px;
+    border-top: var(--lightblack) solid 1px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -212,15 +223,16 @@ header {
 .leadTextContainer {
     margin: 2rem;
     padding: 2rem;
-    background: rgba(32, 32, 32, 0.25);
+    background: rgba(32, 32, 32, 0.5);
     border-radius: 2rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .leadHeadline {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 3rem;
+    margin-bottom: auto;
 }
 
 .leadSubheadline {
@@ -241,12 +253,12 @@ header {
     font-size: 2rem;
     font-weight: 700;
     margin: auto;
-    color: #202020;
+    color: var(--lightgray);
     margin: 1rem;
 }
 
 .content1 hr {
-    border: #FFEE32 solid 1px;
+    border: var(--darkyellow) solid 1px;
     width: 10%;
     margin: auto;
     transition: 0.5s;
@@ -259,18 +271,19 @@ header {
 .content1Subheadline {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.5rem;
-    color: #333533;
+    color: var(--white);
 }
 
 .content1Body {
     font-family: 'Work Sans', sans-serif;
-    color: #202020;
+    color: var(--lightgray);
 }
 
 /* ------------------------------ features ------------------------------ */
 
 .features {
     display: flex;
+    background-color: var(--darkgray);
 }
 
 .features lord-icon {
@@ -281,7 +294,7 @@ header {
     flex: 1;
     margin: 2rem 4rem;
     padding: 2rem;
-    background-color: #202020;
+    background-color: var(--black);
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
@@ -293,17 +306,78 @@ header {
     font-size: 1rem;
     border-radius: 1.5rem;
     padding: 1rem 1.5rem;
-    color: #202020;
-    background: #D6D6D6;
+    color: var(--lightblack);
+    background: var(--darkyellow);
     border: none;
-    transition: 0.25s;
+    transition: 0.5s;
     text-decoration: none;
     text-align: center;
 }
 
 .aboutFeatureContainer a:hover, .contactFeatureContainer a:hover {
-    background-color: #FFEE32;
+    background-color: var(--lightgray);
+    color: var(--lightblack);
     letter-spacing: .25rem;
+}
+
+/* ------------------------------ content 2 ------------------------------ */
+
+.content2 {
+    margin: 0;
+    padding: 0;
+}
+
+.content2Container {
+    background-image: linear-gradient(var(--black), var(--lightblack));
+    display: flex;
+    margin: 8rem 4rem 0 4rem;
+}
+
+.content2ColumnL, .content2ColumnR {
+    margin: 2rem;
+    flex-direction: column;
+    flex: 1;
+}
+
+.content2Headline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto;
+    color: var(--white);
+}
+
+.content2ColumnL hr {
+    border: var(--darkyellow) solid 1px;
+    width: 10%;
+    transition: 0.5s;
+    margin-left: 0;
+}
+
+.content2ColumnL:hover hr {
+    width: 45%;
+}
+
+.content2Body {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--lightgray);
+}
+/*
+.content2Body ul {
+    padding-left: 20px;
+    list-style: none;
+}
+.content2Body li {
+    margin-bottom: 10px;
+}
+*/
+.content2Body li:before {
+    font: var(--fa-font-solid);
+    content: '\f0e7';
+}
+
+.content2ColumnR img {
+    margin-top: -5rem;
 }
 
 /* ------------------------------ footer ------------------------------ */
@@ -311,8 +385,8 @@ header {
 /* - entire footer styling - */
 footer {
     text-align: center;
-    background-color: #202020;
-    color: #202020;
+    background-color: var(--lightgray);
+    color: var(--darkyellow);
     font-family: 'Work Sans', sans-serif;
     margin: 2rem;
     border-radius: 4rem;
@@ -332,7 +406,7 @@ footer {
     flex: 1;
     margin: 1rem;
     padding: 1rem;
-    background-color: #D6D6D6;
+    background-color: var(--lightblack);
     border-radius: 2rem;
 }
 
@@ -347,7 +421,7 @@ footer {
 /* - footer naph box phone number text adjustments - */
 .footerPhone {
     text-decoration: none;
-    color: #202020;
+    color: var(--darkyellow);
 }
 
 .footerPhone:hover {
@@ -358,19 +432,20 @@ footer {
 .footerLinks a {
     display: block;
     text-decoration: none;
-    color: #202020;
+    color: var(--darkyellow);
     padding: 0.5rem;
     transition: 0.25s;
     border-radius: 1rem;
 }
 
 .footerLinks a:hover {
-    background-color: #FFEE32;
+    background-color: var(--darkgray);
+    color: var(--lightyellow);
 }
 
 /* - copyright section styling - */
 .footerCopyright {
     font-size: 0.75rem;
     padding-bottom: 2rem;
-    color: #D6D6D6;
+    color: var(--lightblack);
 }
