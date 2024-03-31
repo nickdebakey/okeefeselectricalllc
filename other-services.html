@@ -1,4 +1,4 @@
-<!-- okeefe's electrical / about page -->
+<!-- okeefe's electrical / installations page -->
 <!-- site designed by: nick debakey -->
 
 <!DOCTYPE html>
@@ -20,9 +20,9 @@
     <meta property="og:type" content="website"> -->
 
     <!-- stylesheet -->
-    <link rel="stylesheet" media="(min-width: 1025px)" href="contact.css">
-    <link rel="stylesheet" media="(min-width: 361px) and (max-width: 1024px)" href="contactTablet.css">
-    <link rel="stylesheet" media="(max-width: 360px)" href="contactMobile.css">
+    <link rel="stylesheet" media="(min-width: 1025px)" href="service.css">
+    <link rel="stylesheet" media="(min-width: 361px) and (max-width: 1024px)" href="serviceTablet.css">
+    <link rel="stylesheet" media="(max-width: 360px)" href="serviceMobile.css">
 
     <!-- font import for montserrat and work sans-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,8 +33,6 @@
 
     <!-- font awesome kit icon js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-
-    <script src="/jquery-3.7.1.min.js"></script>
 </head>
 
 <!-- header -->
@@ -94,17 +92,17 @@
             </a>
             <!-- other services link -->
             <a href="/other-services.html">
-                <div class="navLinkInactive">
+                <div class="navLinkActive">
                     <!-- icon from iconoir -->
-                    <object id="svg1" data="/icons/otherInactive.svg" type="image/svg+xml"></object>
+                    <object id="svg1" data="/icons/other.svg" type="image/svg+xml"></object>
                     <p>Other Services</p>
                 </div>
             </a>
             <!-- contact link -->
             <a href="/contact.html">
-                <div class="navLinkActive">
+                <div class="navLinkInactive">
                     <!-- icon from iconoir -->
-                    <object id="svg1" data="/icons/contact.svg" type="image/svg+xml"></object>
+                    <object id="svg1" data="/icons/contactInactive.svg" type="image/svg+xml"></object>
                     <p>Contact</p>
                 </div>
             </a>
@@ -124,91 +122,36 @@
 <body class="fade-in">
     <div class="pageTitle">
         <div class="pageTitleText">
-            <p class="pageTitleTextHeadline">Contact</p>
+            <p>Other Services</p>
         </div>
         <div class="pageTitleButton">
-            <a href="/index.html">Home</a>
+            <a href="/contact.html">Contact</a>
         </div>
     </div>
     <div class="contentBodyContainer">
         <div class="content1Container">
-            <div class="content1">
-                <p class="content1Headline">Find Residential and Commercial Electrical Services in Richlands and most of
-                    eastern North Carolina</p>
-                <p class="content1Subheadline">Contact Okeefe's Electrical today!</p>
+            <div class="content1L">
+                <p class="content1Headline">We will conduct a bolt-tastic job every time!</p>
+                <br>
                 <hr>
-                <p class="content1Body">Thank you for visiting our website. Okeefe's Electrical is a registered LLC
-                    within
-                    the state of North Carolina focusing on eastern NC. We are here to serve you for all your
-                    residential
-                    and commercial electrical needs. We handle installations, repairs, panel upgrades, troubleshooting,
-                    generator assistance, lighting services, and inspections.
-
-                    Please use the form on this page to contact us through email. You can also call (910) 581-4106 to
-                    speak
-                    with us directly.</p>
+                <p class="content1Body">In addition to installations and repairs, Okeefe's Electrical is the perfect
+                    choice for residential or commercial panel upgrade services, lighting services, or generator
+                    services. From ensuring energy efficiency to adding state-of-the-art smart lighting systems to
+                    brighten up any space with style and functionality to installing generators into your existing
+                    electrical system, we've got you covered.</p>
+            </div>
+            <div class="content1R">
+                <img src="/images/wires.jpg">
             </div>
         </div>
         <div class="content2Container">
             <div class="content2">
-                <div class="content2L">
-                    <form action="https://formsubmit.co/f668a4f0cc5561d0643b10af6a289efb" method="POST"
-                        autocomplete="off">
-                        <!-- formatting/actions -->
-                        <input type="hidden" name="_next" value="/thanks.html">
-                        <input type="hidden" name="_subject" value="New inquiry from your website!">
-                        <input type="hidden" name="_replyto">
-                        <input type="hidden" name="_template" value="box">
-                        <!-- names -->
-                        <div class="formNames">
-                            <!-- first name label and input -->
-                            <div class="fNameContainer">
-                                <!-- first name -->
-                                <label for="fname">First Name:</label>
-                                <input type="text" name="fname" id="fname" placeholder="First" required>
-                            </div>
-                            <!-- last name label and input -->
-                            <div class="lNameContainer">
-                                <!-- last name -->
-                                <label for="lname">Last Name:</label>
-                                <input type="text" name="lname" id="lname" placeholder="Last" required>
-                            </div>
-                        </div>
-                        <!-- phone number -->
-                        <div class="formPhone">
-                            <label for="phone">Phone:</label>
-                            <input type="tel" name="phone" id="phone" placeholder="(000) 000 - 0000" maxlength="16"
-                                required>
-                            <script src="/phone.js"></script>
-                        </div>
-                        <!-- email -->
-                        <div class="formEmail">
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" placeholder="your@email.com" required>
-                        </div>
-                        <!-- message -->
-                        <div class="formMessage">
-                            <label for="message">Message:</label>
-                            <textarea name="message" placeholder="Type your message here."
-                                oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
-                                required></textarea>
-                        </div>
-                        <!-- submit button -->
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-                <div class="content2R">
-                    <div class="contactBox">
-                        <p class="contactBoxHeadline">Okeefe's Electrical</p>
-                        <hr>
-                        <p class="contactBoxSubheadline">Based In:</p>
-                        <p class="contactBoxBody">Richlands, NC</p>
-                        <p class="contactBoxSubheadline">Call Us:</p>
-                        <a class="contactBoxBody" href="tel:9105814106">(910) 581-4106</a>
-                        <p class="contactBoxSubheadline">Hours:</p>
-                        <p class="contactBoxBody">Available 24/7</p>
-                    </div>
-                </div>
+                <p class="content2Headline">Watt are you waiting for?</p>
+                <hr>
+                <p class="content2Body">Call Okeefe's Electrical today! We can do it all and our commitment to quality
+                    workmanship and customer satisfaction shines through in every project we undertake, ensuring a spark
+                    of excellence in every aspect of our services. We offer free estimates, are based in Richlands, NC,
+                    but service most of eastern North Carolina.</p>
             </div>
         </div>
     </div>

@@ -1,0 +1,358 @@
+/*
+
+desktop view
+
+basic information -
+
+heading/important font - montserrat
+main/body text - work sans
+
+color palette -
+white - #fff
+timberwolf (light gray) - #d6d6d6
+aureolin (bright yellow) - #ffee32
+jonquil (mustard yellow) - #ffd100
+jet (dark gray) - #333533
+eerie black (light black) - #202020
+black - #000
+
+*/
+
+/* ------------------------------ general adjustments ------------------------------ */
+
+@import "/global.css";
+
+/* ------------------------------ page title banner ------------------------------ */
+.pageTitle {
+    background-color: var(--darkgray);
+    border-top: var(--lightblack) solid 1px;
+    display: flex;
+    width: 100%;
+    padding-top: 20vh;
+}
+
+.pageTitleText,
+.pageTitleButton {
+    width: 50%;
+    margin: 0;
+}
+
+.pageTitleText {
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: 'Montserant', sans-serif;
+    font-size: 4rem;
+}
+
+.pageTitleButton {
+    text-align: right;
+    margin: auto 0 auto 0;
+}
+
+.pageTitleText p {
+    color: var(--darkyellow);
+    margin: 0;
+    padding: 2rem;
+    letter-spacing: .25rem;
+    transition: 0.5s;
+}
+
+.pageTitleText p:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px var(--darkyellow);
+    transform: scaleX(0);
+    transition: transform .25s ease-in-out;
+    transform-origin: 100% 50%;
+    width: 75%;
+}
+
+.pageTitleText p:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
+
+.pageTitleButton a {
+    margin-right: 2rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
+    color: var(--lightblack);
+    background: var(--darkyellow);
+    border: none;
+    transition: 0.25s;
+    text-decoration: none;
+    width: 100%;
+}
+
+.pageTitleButton a:hover {
+    background-color: var(--lightgray);
+    letter-spacing: 0.25rem;
+}
+
+/* ------------------------------ content ------------------------------ */
+
+/* --------------- content 1 --------------- */
+
+.content1Container {
+    text-align: center;
+    padding: 4rem;
+}
+
+.content1 {
+    background-color: var(--darkyellow);
+    border-radius: 2rem;
+    padding: 2rem 4rem;
+}
+
+.content1Headline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto;
+    color: var(--darkgray);
+    margin: 1rem;
+}
+
+.content1Subheadline {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.content1 hr {
+    border: var(--lightgray) solid 1px;
+    width: 10%;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.content1:hover hr {
+    width: 30%;
+}
+
+.content1Body {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--darkgray);
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+}
+
+/* --------------- content 2 --------------- */
+
+.content2Container {
+    padding: 0 4rem;
+}
+
+.content2 {
+    background-image: linear-gradient(var(--black), var(--lightblack));
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    display: flex;
+    padding: 2rem 4rem;
+}
+
+.content2L,
+.content2R {
+    margin: 2rem;
+    flex-direction: column;
+    flex: 1;
+}
+
+form {
+    display: block;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--lightgray);
+    outline: none;
+    box-sizing: border-box;
+    margin-top: 0.75rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+    color: var(--lightgray);
+}
+
+input:focus {
+    color: var(--lightyellow);
+    border-bottom: 2px solid var(--darkyellow);
+    font-weight: 800;
+}
+
+textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--lightgray);
+    resize: none;
+    box-sizing: border-box;
+    margin-top: 0.75rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+    outline: none;
+    color: var(--lightgray);
+}
+
+textarea:focus {
+    color: var(--lightyellow);
+    border-bottom: 2px solid var(--darkyellow);
+    font-weight: 800;
+}
+
+label {
+    color: var(--darkgray);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--lightgray);
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: var(--lightgray);
+    border-radius: 2rem;
+    padding: 1rem 0;
+    transition: 0.5s;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+    border: 1px solid var(--darkyellow);
+    color: var(--darkyellow);
+    font-weight: 800;
+    letter-spacing: .125rem;
+}
+
+.formNames {
+    display: inline-flex;
+    width: 100%;
+}
+
+.fNameContainer,
+.lNameContainer {
+    width: 100%;
+    margin: 0;
+}
+
+.fNameContainer {
+    padding-right: 0.25rem;
+}
+
+.lNameContainer {
+    padding-left: 0.25rem;
+}
+
+.formPhone,
+.formEmail,
+.formMessage {
+    margin: 1rem 0;
+}
+
+.content2R {
+    display: flex;
+}
+
+.contactBox {
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: var(--darkgray);
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+
+.contactBox:hover {
+    background-color: var(--lightblack);
+}
+
+.contactBoxHeadline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 0;
+    color: var(--lightyellow);
+    text-align: center;
+    transition: 0.5s;
+}
+
+.contactBox:hover p.contactBoxHeadline {
+    letter-spacing: 0.25rem;
+    color: var(--darkyellow)
+}
+
+.contactBox hr {
+    border: var(--lightblack) solid 1px;
+    width: 10%;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.contactBox:hover hr {
+    width: 30%;
+    border: 1px solid var(--black);
+}
+
+.contactBoxSubheadline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: .75rem;
+    color: var(--lightyellow);
+    transition: .5s;
+    margin-top: 1.5rem;
+}
+
+.contactBox:hover p.contactBoxSubheadline {
+    letter-spacing: 0.125rem;
+    color: var(--darkyellow);
+}
+
+.contactBoxBody {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--lightgray);
+    transition: 0.5s;
+    font-size: 1.25rem;
+}
+
+.contactBox:hover p.contactBoxBody, .contactBox:hover a.contactBoxBody {
+    color: var(--white);
+}
+
+.contactBox a {
+    text-decoration: none;
+}
+
+/* ------------------------------ media queries ------------------------------ */
+
+/* --------------- content --------------- */
+
+@media (max-width: 1300px) {
+
+    .content1Headline {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: auto;
+        color: var(--darkgray);
+        margin: 1rem;
+    }
+
+    .content1Body {
+        font-family: 'Work Sans', sans-serif;
+        color: var(--darkgray);
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+}

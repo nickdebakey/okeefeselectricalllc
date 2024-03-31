@@ -20,7 +20,9 @@
     <meta property="og:type" content="website"> -->
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" media="(min-width: 1025px)" href="index.css">
+    <link rel="stylesheet" media="(min-width: 361px) and (max-width: 1024px)" href="indexTablet.css">
+    <link rel="stylesheet" media="(max-width: 360px)" href="indexMobile.css">
 
     <!-- font import for montserrat and work sans-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,13 +36,14 @@
 </head>
 
 <!-- header -->
-<header>
+<header class="fade-in">
     <!-- entire navigation container -->
     <div class="nav">
         <!-- phone call button -->
         <div class="navContact">
-            <a href="tel:+16107311318">
+            <a href="tel:+19105814106">
                 <div class="navContactLink">
+                    <!-- icon from iconoir -->
                     <object id="svg1" data="/icons/phone.svg" type="image/svg+xml"></object>
                 </div>
             </a>
@@ -50,6 +53,7 @@
             <!-- home link -->
             <a href="/">
                 <div class="navLinkActive">
+                    <!-- icon from iconoir -->
                     <object id="svg1" data="/icons/home.svg" type="image/svg+xml"></object>
                     <p>Home</p>
                 </div>
@@ -57,13 +61,47 @@
             <!-- about link -->
             <a href="/about.html">
                 <div class="navLinkInactive">
+                    <!-- icon from iconoir -->
                     <object id="svg1" data="/icons/aboutInactive.svg" type="image/svg+xml"></object>
                     <p>About</p>
+                </div>
+            </a>
+            <!-- installations link -->
+            <a href="/installations.html">
+                <div class="navLinkInactive">
+                    <!-- icon from iconoir -->
+                    <object id="svg1" data="/icons/installationsInactive.svg" type="image/svg+xml"></object>
+                    <p>Installations</p>
+                </div>
+            </a>
+            <!-- repairs link -->
+            <a href="/repairs.html">
+                <div class="navLinkInactive">
+                    <!-- icon from iconoir -->
+                    <object id="svg1" data="/icons/repairsInactive.svg" type="image/svg+xml"></object>
+                    <p>Repairs</p>
+                </div>
+            </a>
+            <!-- inspections link -->
+            <a href="/inspections.html">
+                <div class="navLinkInactive">
+                    <!-- icon from iconoir -->
+                    <object id="svg1" data="/icons/inspectionsInactive.svg" type="image/svg+xml"></object>
+                    <p>Inspections</p>
+                </div>
+            </a>
+            <!-- other services link -->
+            <a href="/other-services.html">
+                <div class="navLinkInactive">
+                    <!-- icon from iconoir -->
+                    <object id="svg1" data="/icons/otherInactive.svg" type="image/svg+xml"></object>
+                    <p>Other Services</p>
                 </div>
             </a>
             <!-- contact link -->
             <a href="/contact.html">
                 <div class="navLinkInactive">
+                    <!-- icon from iconoir -->
                     <object id="svg1" data="/icons/contactInactive.svg" type="image/svg+xml"></object>
                     <p>Contact</p>
                 </div>
@@ -71,8 +109,9 @@
         </div>
         <!-- email button -->
         <div class="navContact">
-            <a href="mailto:ndebakey@gmail.com">
+            <a href="mailto:dalton4106@gmail.com">
                 <div class="navContactLink">
+                    <!-- icon from iconoir -->
                     <object id="svg1" data="/icons/email.svg" type="image/svg+xml"></object>
                 </div>
             </a>
@@ -81,73 +120,94 @@
 </header>
 
 <!-- page content -->
-<body>
+
+<body class="fade-in">
     <!-- section 1 (parallax image) -->
     <div class="parallax1">
         <div class="leadTextContainer1">
-            <p class="leadHeadline1">Schedule Electrical Services in Richlands, NC</p>
+            <p class="leadHeadline1">Don't Blow a Fuse Over Bad Wiring</p>
             <p class="leadSubheadline1">Turn to <strong>Okeefe's Electrical</strong> for all your electrical needs</p>
             <a class="leadContactBtn1" href="/contact.html">Contact</a>
         </div>
     </div>
     <!-- section 2 (first chunk of content) -->
     <div class="content1">
-        <p class="content1Headline">Power Your Home With Confidence</p>
+        <p class="content1Headline">Shocking prices, electrifying service - zap away your problems!</p>
         <hr>
         <p class="content1Subheadline">Turn to an electrical contractor in Richlands, NC</p>
-        <p class="content1Body">Reliable electricity is vital if you want a comfortable home. When problems arise,
-            you'll want to have access
-            to an electrical contractor you trust to provide repairs. Compassion Electrical Services is here to meet all
-            of your electrical needs. We provide electrical services in Thornton, CO and the greater Denver
-            area.<br><br>We're here to help you get the most out of your home's electrical system, and we won't stop
-            until
-            you're completely satisfied with the results. Get in touch with us today and see how we can meet your
-            electrical needs.</p>
+        <p class="content1Body">Reliable energy efficient electricity is imperative in the world we live in today.
+            That's why, when problems arise, you'll want to have us on your side to provide any service you need.
+            Okeefe's Electrical is here to meet all of your needs and desires. We provide services in Richlands and most
+            of eastern North Carolina.<br><br>Whether you need installations, repairs, or inspections for a residential
+            or commercial space, we've got your back. Reach out Okeefe's Electrical today to see how we can be of
+            assistance.</p>
     </div>
     <!-- section 3 (features) -->
     <div class="features">
-        <div class="aboutFeatureContainer">
+        <!-- installations feature -->
+        <div class="featureContainer">
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
-            <lord-icon src="https://cdn.lordicon.com/bgebyztw.json" trigger="hover"
-                colors="primary:#D6D6D6,secondary:#FFD100" style="width:150px;height:150px">
+            <lord-icon src="https://cdn.lordicon.com/jdalicnn.json" trigger="hover"
+                colors="primary:#d6d6d6,secondary:#ffd100" style="width:150px;height:150px">
             </lord-icon>
-            <a href="/about.html">About</a>
+            <a href="/installations.html">Installations</a>
         </div>
-        <div class="contactFeatureContainer">
+        <!-- repairs feature -->
+        <div class="featureContainer">
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
-            <lord-icon src="https://cdn.lordicon.com/wzrwaorf.json" trigger="hover"
-                colors="primary:#D6D6D6,secondary:#FFD100" style="width:150px;height:150px">
+            <lord-icon src="https://cdn.lordicon.com/zguybvqs.json" trigger="hover"
+                colors="primary:#d6d6d6,secondary:#ffd100" style="width:150px;height:150px">
             </lord-icon>
-            <a href="/contact.html">Contact</a>
+            <a href="/repairs.html">Repairs</a>
+        </div>
+        <!-- inspections feature -->
+        <div class="featureContainer">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/unukghxb.json" trigger="hover"
+                colors="primary:#d6d6d6,secondary:#ffd100" style="width:150px;height:150px">
+            </lord-icon>
+            <a href="/inspections.html">Inspections</a>
+        </div>
+        <!-- other services feature -->
+        <div class="featureContainer">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/zrkkrrpl.json" trigger="hover" state="hover-swirl"
+                colors="primary:#d6d6d6,secondary:#ffd100" style="width:150px;height:150px">
+            </lord-icon>
+            <a href="/other-services.html">Other Services</a>
+        </div>
+    </div>
+    <!-- section 7 (service area banner) -->
+    <div class="serviceAreaBanner">
+        <div class="serviceAreaBannerContainer">
+            <p>Providing Service in Richlands, Wilmington, Jacksonville,<br>New Bern, and most of Eastern North Carolina
+            </p>
         </div>
     </div>
     <!-- section 4 (second chunk of content) -->
     <div class="content2">
         <div class="content2Container">
             <div class="content2ColumnL">
-                <p class="content2Headline">Take a Closer Look at Our Services</p>
+                <p class="content2Headline">Wondering what services we have to offer?</p>
                 <hr>
                 <div class="content2Body">
-                    <p>From EV charger installations to lighting repairs, we can do it all. We have
-                        over 20 years of experience and are well-versed in many aspects of electrical work. We
-                        offer:
+                    <p>We can do it all! With over 13 years of experience, we are capable of doing any type of job and
+                        we will do what it takes to ensure you have a reliable electrical system. We offer:
                     </p>
                     <br>
                     <ul>
-                        <li>New construction electrical services</li>
-                        <li>Electrical installation services</li>
-                        <li>Electrical upgrade services</li>
-                        <li>Basement finishing electrical services</li>
-                        <li>Circuit breaker replacement services</li>
-                        <li>Lighting installation and repair services</li>
-                        <li>Electrical maintenance and emergency services</li>
-                        <li>Electric vehicle charger services</li>
+                        <li>residential electrical services</li>
+                        <li>commercial electrical services</li>
+                        <li>electrical panel upgrade services</li>
+                        <li>electrical trouble shooting services</li>
+                        <li>electrical installation and repair services</li>
+                        <li>generator services</li>
+                        <li>lighting installation and repair services</li>
+                        <li>electrical inspection services</li>
                     </ul>
                     <br>
-                    <p>Whether you need new lighting installed, outlets added or a complete electrical system
-                        overhaul, we've got you covered. Contact us today and get a free estimate on your next
-                        electrical
-                        service.</p>
+                    <p>Whatever your electrical needs you have, we have you covered. Contact us today for a free
+                        estimate.</p>
                 </div>
             </div>
             <div class="content2ColumnR">
@@ -158,33 +218,26 @@
     <!-- section 5 (parallax image) -->
     <div class="parallax2">
         <div class="leadTextContainer2">
-            <p class="leadHeadline2">Don't Blow a Fuse Over Bad Wiring</p>
-            <p class="leadSubheadline2">Call us today to plan electrical repairs</p>
+            <p class="leadHeadline2">Is Your Electrical System on the Fritz?</p>
+            <p class="leadSubheadline2">Reach out today to see how we can help.</p>
             <a class="leadContactBtn2" href="/contact.html">Contact</a>
         </div>
     </div>
     <!-- section 6 (third chunk of content) -->
     <div class="content3">
         <div class="content3Container">
-            <p class="content3Headline">Compassion is Key</p>
+            <p class="content3Headline">Why choose Okeefe's Electrical?</p>
             <hr>
-            <p class="content3Body">The electrical contractors at Compassion Electrical Services have the skills and
-                expertise to give you the results you want. We're licensed (license #EC.0102853), insured and dedicated
-                to providing excellent customer service. We care deeply about our community and strive to show it by
-                donating a percentage of our revenue to those in need. Call 720-464-4088 today and see why our customers
-                keep comin</p>
-        </div>
-    </div>
-    <!-- section 7 (service area banner) -->
-    <div class="serviceAreaBanner">
-        <div class="serviceAreaBannerContainer">
-            <p>Providing Service in Richlands, Jacksonville, New Bern, and most of Eastern North Carolina</p>
+            <p class="content3Body">We have the skills and expertise to give you the results you want. We are dedicated
+                to providing the best customer service you can get while also doing the best job we can to make sure you
+                are beyond satisfied. Call (910) 581-4106 today to see how we can help you and see why customers keep
+                coming back.</p>
         </div>
     </div>
 </body>
 
 <!-- footer -->
-<footer>
+<footer class="fade-in">
     <!-- entire footer container -->
     <div class="footerContainer">
         <!-- logo column -->
@@ -193,22 +246,24 @@
         </div>
         <!-- naph box -->
         <div class="footerContact">
-            <p class="footerBizName">Okeefe's Electrical</p>
-            <p class="footerLocation">Richlands, NC</p>
+            <p class="footerTitle">Okeefe's Electrical</p>
+            <p>Richlands, NC</p>
+            <p>Servicing Eastern North Carolina</p>
             <a class="footerPhone" href="tel:+19105814106">(910) 581-4106</a>
-            <p class="footerHours">Available 24/7</p>
+            <p>Available 24/7</p>
         </div>
         <!-- navigation -->
         <div class="footerLinks">
-            <p class="footerLinksTitle">Explore</p>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <p class="footerTitle">Services</p>
+            <a href="/installations.html">Installations</a>
+            <a href="/repairs.html">Repairs</a>
+            <a href="/inspections.html">Inspections</a>
+            <a href="/other-services.html">Other Services</a>
         </div>
     </div>
     <!-- copyright -->
     <div class="footerCopyright">
-        <p>Copyright © 2024 Okeefe's Electrical, all rights reserved. <br>Richlands, NC 28574 | (910) 581-4106</p>
+        <p>Copyright © 2024 Okeefe's Electrical, all rights reserved. Richlands, NC 28574 | (910) 581-4106</p>
     </div>
 </footer>
 

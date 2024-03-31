@@ -1,0 +1,138 @@
+/*
+
+tablet view
+
+basic information -
+
+heading/important font - montserrat
+main/body text - work sans
+
+color palette -
+white - #fff
+timberwolf (light gray) - #d6d6d6
+aureolin (bright yellow) - #ffee32
+jonquil (mustard yellow) - #ffd100
+jet (dark gray) - #333533
+eerie black (light black) - #202020
+black - #000
+
+*/
+
+/* ------------------------------ general adjustments ------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--lightblack);
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fff;
+    --lightgray: #d6d6d6;
+    --lightyellow: #ffee32;
+    --darkyellow: #ffd100;
+    --darkgray: #333533;
+    --lightblack: #202020;
+    --black: #000;
+}
+
+/* - scrollbar - */
+/* - firefox - */
+* {
+    scrollbar-width: none;
+    scrollbar-color: var(--darkyellow) var(--lightblack);
+}
+
+/* - chrome, edge, and safari - */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--lightblack);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--darkyellow);
+    border-radius: 10px;
+    border: 3px solid var(--lightblack);
+}
+
+/* ------------------------------ navigation ------------------------------ */
+
+/* - entire header styling - */
+header {
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav {
+    width: 100%;
+}
+
+.navLinks {
+width: 100%;
+}
+
+/* - navigation links - */
+.navLinks a {
+    color: var(--lightblack);
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    transition: 0.25s;
+    border-radius: 1rem;
+}
+
+/* - container of the text and svg - */
+.navLinks div {
+    padding: 1.5rem;
+}
+
+/* - navigation links active/current page - */
+.navLinkActive {
+    background-color: var(--darkyellow);
+    border-radius: 0.8rem;
+    text-align: center;
+    width: fit-content;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: #202020;
+}
+
+/* - navigation links inactive pages container - */
+.navLinkInactive {
+    background-color: var(--lightblack);
+    border-radius: 0.8rem;
+    text-align: center;
+    width: fit-content;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: var(--lightgray);
+}
+
+/* - navigation links inactive svg and text - */
+.navLinkInactive object,
+.navLinkInactive p,
+.navLinkActive object,
+.navLinkActive p {
+    margin: 0;
+    padding: 0;
+}
+
+/* - phone/email container in navigation - */
+.navContact {
+display: none;
+}

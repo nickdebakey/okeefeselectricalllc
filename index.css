@@ -1,5 +1,6 @@
 /*
 
+desktop view
 basic information -
 
 heading/important font - montserrat
@@ -16,168 +17,9 @@ black - #000
 
 */
 
-/* ------------------------------ general adjustments ------------------------------ */
+/* ------------------------------ import css from global file ------------------------------ */
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--lightblack);
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --white: #fff;
-    --lightgray: #d6d6d6;
-    --lightyellow: #ffee32;
-    --darkyellow: #ffd100;
-    --darkgray: #333533;
-    --lightblack: #202020;
-    --black: #000;
-}
-
-/* - scrollbar - */
-/* - firefox - */
-* {
-    scrollbar-width: none;
-    scrollbar-color: var(--darkyellow) var(--lightblack);
-}
-
-/* - chrome, edge, and safari - */
-*::-webkit-scrollbar {
-    width: 16px;
-}
-
-*::-webkit-scrollbar-track {
-    background: var(--lightblack);
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: var(--darkyellow);
-    border-radius: 10px;
-    border: 3px solid var(--lightblack);
-}
-
-/* ------------------------------ navigation ------------------------------ */
-
-/* - entire header styling - */
-header {
-    background-color: transparent;
-    position: fixed !important;
-    top: 7.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100% !important;
-}
-
-/* - entire nav container - */
-.nav {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
-}
-
-/* - links container - */
-.navLinks {
-    display: inline-flex;
-    background: var(--lightgray);
-    margin: 1rem auto 1rem auto;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 1rem;
-}
-
-/* - navigation links - */
-.navLinks a {
-    color: var(--lightblack);
-    text-align: center;
-    margin: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-}
-
-/* - container of the text and svg - */
-.navLinks div {
-    padding: 1.5rem;
-}
-
-/* - navigation links active/current page - */
-.navLinkActive {
-    background-color: var(--darkyellow);
-    border-radius: 0.8rem;
-    text-align: center;
-    width: fit-content;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    color: #202020;
-}
-
-/* - navigation links inactive pages container - */
-.navLinkInactive {
-    background-color: var(--lightblack);
-    border-radius: 0.8rem;
-    text-align: center;
-    width: fit-content;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    color: var(--lightgray);
-}
-
-/* - navigation links inactive svg and text - */
-.navLinkInactive object,
-.navLinkInactive p,
-.navLinkActive object,
-.navLinkActive p {
-    margin: 0;
-    padding: 0;
-}
-
-/* - phone/email container in navigation - */
-.navContact {
-    background: var(--lightgray);
-    margin: 0 1rem 0 1rem;
-    border-radius: 1rem;
-}
-
-/* - link container encompassing the div holding the svg - */
-.navContact a,
-.navLinks a {
-    position: relative;
-    display: inline-block;
-    transition: 0.25s;
-    border-radius: 1rem;
-}
-
-/* - how to get the svg linked in the button in the nav - */
-.navContact a::after,
-.navLinks a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-/* - navigation hover action - */
-.navContact a:hover,
-.navLinks a:hover {
-    background-color: var(--darkyellow);
-}
-
-/* - div styling for the svg - */
-.navContactLink {
-    background-color: var(--lightblack);
-    border-radius: 0.8rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
+@import "/global.css";
 
 /* ------------------------------ parallax lead 1 ------------------------------ */
 
@@ -276,16 +118,19 @@ header {
 
 .features {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: var(--darkgray);
+    padding: 3rem 1rem;
 }
 
 .features lord-icon {
     margin: auto;
 }
 
-.aboutFeatureContainer, .contactFeatureContainer {
+.featureContainer {
     flex: 1;
-    margin: 2rem 4rem;
+    margin: 2rem 1rem;
     padding: 2rem;
     background-color: var(--black);
     display: flex;
@@ -293,7 +138,7 @@ header {
     border-radius: 2rem;
 }
 
-.aboutFeatureContainer a, .contactFeatureContainer a {
+.featureContainer a {
     margin: 2rem 4rem;
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
@@ -307,10 +152,10 @@ header {
     text-align: center;
 }
 
-.aboutFeatureContainer a:hover, .contactFeatureContainer a:hover {
+.featureContainer a:hover {
     background-color: var(--lightgray);
     color: var(--lightblack);
-    letter-spacing: .25rem;
+    letter-spacing: .1rem;
 }
 
 /* ------------------------------ content 2 ------------------------------ */
@@ -506,75 +351,4 @@ header {
     display: flex;
     align-items: center;
     padding: 1rem;
-}
-
-/* ------------------------------ footer ------------------------------ */
-
-/* - entire footer styling - */
-footer {
-    text-align: center;
-    background-image: linear-gradient(var(--lightblack), var(--lightgray));
-    color: var(--darkyellow);
-    font-family: 'Work Sans', sans-serif;
-    margin: 8rem 2rem 4rem 2rem;
-    border-bottom-left-radius: 4rem;
-    border-bottom-right-radius: 4rem;
-}
-
-/* - the container for the logo/naph box/navigation - */
-.footerContainer {
-    display: flex;
-    align-items: center;
-    padding: 1rem 1rem 0 1rem;
-}
-
-/* - footer columns styling - */
-.footerLogo,
-.footerContact,
-.footerLinks {
-    flex: 1;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: var(--lightblack);
-    border-radius: 2rem;
-}
-
-/* - business name/navigation title styling in footer - */
-.footerBizName,
-.footerLinksTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
-/* - footer naph box phone number text adjustments - */
-.footerPhone {
-    text-decoration: none;
-    color: var(--darkyellow);
-}
-
-.footerPhone:hover {
-    text-decoration: underline;
-}
-
-/* - footer navigation link styling - */
-.footerLinks a {
-    display: block;
-    text-decoration: none;
-    color: var(--darkyellow);
-    padding: 0.5rem;
-    transition: 0.25s;
-    border-radius: 1rem;
-}
-
-.footerLinks a:hover {
-    background-color: var(--darkgray);
-    color: var(--lightyellow);
-}
-
-/* - copyright section styling - */
-.footerCopyright {
-    font-size: 0.75rem;
-    padding-bottom: 1rem;
-    color: var(--lightblack);
 }

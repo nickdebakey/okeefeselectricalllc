@@ -1,0 +1,69 @@
+/*
+
+desktop view
+
+basic information -
+
+heading/important font - montserrat
+main/body text - work sans
+
+color palette -
+white - #fff
+timberwolf (light gray) - #d6d6d6
+aureolin (bright yellow) - #ffee32
+jonquil (mustard yellow) - #ffd100
+jet (dark gray) - #333533
+eerie black (light black) - #202020
+black - #000
+
+*/
+
+/* ------------------------------ general adjustments ------------------------------ */
+
+@import "/global.css";
+
+/* ------------------------------ thanks message ------------------------------ */
+
+.thanksContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--darkgray);
+    border-radius: 2rem;
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.thanksMessage {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+a {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: var(--lightblack);
+    color: var(--lightgray);
+    width: 33%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: var(--darkyellow);
+    color: var(--lightblack);
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+}
