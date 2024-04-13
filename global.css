@@ -31,8 +31,8 @@ body {
 :root {
     --white: #fff;
     --lightgray: #d6d6d6;
-    --lightyellow: #ffee32;
-    --darkyellow: #ffd100;
+    --lightyellow: #F9E99A;
+    --darkyellow: #975C23;
     --darkgray: #333533;
     --lightblack: #202020;
     --black: #000;
@@ -61,18 +61,29 @@ body {
 }
 
 .fade-in {
-	-webkit-animation: fade-in .75s ease-in-out 0.33s both;
-	        animation: fade-in .75s ease-in-out 0.33s both;
+    -webkit-animation: fade-in .75s ease-in-out 0.33s both;
+    animation: fade-in .75s ease-in-out 0.33s both;
 }
 
- @-webkit-keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  @keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }  
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 /* ------------------------------ navigation ------------------------------ */
 
@@ -125,7 +136,7 @@ header {
 
 /* - navigation links active/current page - */
 .navLinkActive {
-    background-color: var(--darkyellow);
+    background-image: linear-gradient(to bottom right, var(--darkyellow), var(--lightyellow), var(--darkyellow));
     border-radius: 0.8rem;
     text-align: center;
     width: fit-content;
@@ -162,7 +173,7 @@ header {
 }
 
 /* - adjusting for window size - */
-@media (max-width: 1120px){
+@media (max-width: 1120px) {
     .navContact {
         display: none;
     }
@@ -191,7 +202,7 @@ header {
 /* - navigation hover action - */
 .navContact a:hover,
 .navLinks a:hover {
-    background-color: var(--darkyellow);
+    background-image: linear-gradient(to bottom left, var(--darkyellow), var(--lightyellow), var(--darkyellow));
 }
 
 /* - div styling for the svg - */
@@ -200,7 +211,7 @@ header {
     border-radius: 0.8rem;
     margin: 0.5rem;
     padding: 0.5rem;
-}  
+}
 
 /* ------------------------------ footer ------------------------------ */
 
@@ -208,7 +219,7 @@ header {
 footer {
     text-align: center;
     background-color: var(--lightgray);
-    color: var(--darkyellow);
+    color: var(--white);
     font-family: 'Work Sans', sans-serif;
     margin: 4rem 2rem;
     border-radius: 4rem;
@@ -217,8 +228,8 @@ footer {
 /* - the container for the logo/naph box/navigation - */
 .footerContainer {
     display: flex;
-    align-items: center;
     padding: 1rem 1rem 0 1rem;
+    align-items: stretch;
 }
 
 /* - footer columns styling - */
@@ -230,6 +241,15 @@ footer {
     padding: 1rem;
     background-color: var(--lightblack);
     border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLogo img {
+    margin: auto 0rem;
+    width: 100%;
 }
 
 /* - business name/navigation title styling in footer - */
@@ -237,12 +257,17 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
+    background: -webkit-linear-gradient(var(--darkyellow), var(--lightyellow), var(--darkyellow));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* - footer naph box phone number text adjustments - */
 .footerPhone {
     text-decoration: none;
-    color: var(--darkyellow);
+    color: var(--white);
+    margin: 1rem 0;
 }
 
 .footerPhone:hover {
@@ -254,15 +279,16 @@ footer {
 .footerLinks a {
     display: block;
     text-decoration: none;
-    color: var(--darkyellow);
+    color: var(--white);
     padding: 0.5rem;
     transition: 0.25s;
     border-radius: 1rem;
+    width: 100%;
 }
 
 .footerLinks a:hover {
-    background-color: var(--darkgray);
-    color: var(--white);
+    background-image: linear-gradient(to left, var(--darkyellow), var(--lightyellow), var(--darkyellow));
+    color: var(--black);
 }
 
 /* - copyright section styling - */

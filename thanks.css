@@ -41,6 +41,11 @@ black - #000
     box-sizing: border-box;
 }
 
+.thanksContainer img {
+    width: 50%;
+    padding-bottom: 1rem;
+}
+
 .thanksMessage {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
@@ -48,7 +53,7 @@ black - #000
     margin: 0;
 }
 
-a {
+.returnButton {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
@@ -61,9 +66,51 @@ a {
     transition: 0.5s;
 }
 
-a:hover {
+.returnButton:hover {
     background-color: var(--darkyellow);
     color: var(--lightblack);
     letter-spacing: 0.25rem;
     font-weight: 700;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .thanksContainer {
+        width: 75vw;
+        height: 75vh;
+    }
+
+    .thanksMessage {
+        font-size: 1.5rem;
+    }
+
+    .thanksContainer img {
+        width: 75%;
+    }
+
+    .returnButton {
+        font-size: 1rem;
+        width: 66%;
+    }
+}
+
+@media (max-width: 767px) {
+    .thanksContainer {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .thanksMessage {
+        font-size: 1.5rem;
+    }
+
+    .thanksContainer img {
+        width: 80%;
+        padding-bottom: 1.5rem;
+    }
+
+    .returnButton {
+        font-size: 1rem;
+        width: 75%;
+    }
 }

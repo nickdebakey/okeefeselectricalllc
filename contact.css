@@ -52,26 +52,27 @@ black - #000
 }
 
 .pageTitleText p {
-    color: var(--darkyellow);
+    background: -webkit-linear-gradient(right, var(--darkyellow), var(--lightyellow), var(--darkyellow));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 0;
-    padding: 2rem;
+    padding-left: 2rem;
     letter-spacing: .25rem;
     transition: 0.5s;
 }
 
-.pageTitleText p:after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px var(--darkyellow);
-    transform: scaleX(0);
-    transition: transform .25s ease-in-out;
-    transform-origin: 100% 50%;
-    width: 75%;
+.pageTitleText hr {
+    background-image: linear-gradient(to left, var(--darkyellow), var(--lightyellow), var(--darkyellow));
+    border: none;
+    height: 2px;
+    width: 0%;
+    margin: 0 0 1rem 2rem;
+    transition: 0.5s;
 }
 
-.pageTitleText p:hover:after {
-    transform: scaleX(1);
-    transform-origin: 0% 50%;
+.pageTitleText:hover hr {
+    width: 75%;
 }
 
 .pageTitleButton a {
@@ -81,7 +82,7 @@ black - #000
     border-radius: 1.5rem;
     padding: 1rem 1.5rem;
     color: var(--lightblack);
-    background: var(--darkyellow);
+    background: var(--lightgray);
     border: none;
     transition: 0.25s;
     text-decoration: none;
@@ -89,7 +90,7 @@ black - #000
 }
 
 .pageTitleButton a:hover {
-    background-color: var(--lightgray);
+    background-image: linear-gradient(to bottom right, var(--darkyellow), var(--lightyellow), var(--darkyellow));
     letter-spacing: 0.25rem;
 }
 
@@ -103,7 +104,7 @@ black - #000
 }
 
 .content1 {
-    background-color: var(--darkyellow);
+    background-image: linear-gradient(to bottom right, var(--darkyellow), var(--lightyellow), var(--darkyellow));
     border-radius: 2rem;
     padding: 2rem 4rem;
 }
@@ -182,8 +183,8 @@ input[type=email] {
 }
 
 input:focus {
-    color: var(--lightyellow);
-    border-bottom: 2px solid var(--darkyellow);
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
     font-weight: 800;
 }
 
@@ -202,8 +203,8 @@ textarea {
 }
 
 textarea:focus {
-    color: var(--lightyellow);
-    border-bottom: 2px solid var(--darkyellow);
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
     font-weight: 800;
 }
 
@@ -229,8 +230,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover, input[type=submit]:focus {
-    border: 1px solid var(--darkyellow);
-    color: var(--darkyellow);
+    border: 1px solid var(--white);
+    color: var(--white);
     font-weight: 800;
     letter-spacing: .125rem;
 }
@@ -269,13 +270,9 @@ input[type=submit]:hover, input[type=submit]:focus {
     width: 100%;
     box-sizing: border-box;
     padding: 2rem;
-    background-color: var(--darkgray);
+    background-image: linear-gradient(to bottom left, var(--darkyellow), var(--lightyellow), var(--darkyellow));
     border-radius: 2rem;
     transition: 0.5s;
-}
-
-.contactBox:hover {
-    background-color: var(--lightblack);
 }
 
 .contactBoxHeadline {
@@ -283,18 +280,18 @@ input[type=submit]:hover, input[type=submit]:focus {
     font-weight: 800;
     font-size: 2rem;
     line-height: 0;
-    color: var(--lightyellow);
+    color: var(--darkgray);
     text-align: center;
     transition: 0.5s;
 }
 
 .contactBox:hover p.contactBoxHeadline {
     letter-spacing: 0.25rem;
-    color: var(--darkyellow)
+    color: var(--black);
 }
 
 .contactBox hr {
-    border: var(--lightblack) solid 1px;
+    border: var(--darkgray) solid 1px;
     width: 10%;
     margin: auto;
     transition: 0.5s;
@@ -309,14 +306,14 @@ input[type=submit]:hover, input[type=submit]:focus {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: .75rem;
-    color: var(--lightyellow);
+    color: var(--darkgray);
     transition: .5s;
     margin-top: 1.5rem;
 }
 
 .contactBox:hover p.contactBoxSubheadline {
     letter-spacing: 0.125rem;
-    color: var(--darkyellow);
+    color: var(--black);
 }
 
 .contactBoxBody {
